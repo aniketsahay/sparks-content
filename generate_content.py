@@ -48,8 +48,8 @@ DATE_DISPLAY = datetime.date.today().strftime("%Y-%m-%d")
 GENERATED_AT = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 
 REDDIT_HEADERS  = {"User-Agent": "SparksContentGen/1.0"}
-REDDIT_COUNT    = 15   # examples to pull from Reddit
-GENERATED_COUNT = 10   # examples to sample from existing generated content
+REDDIT_COUNT    = 10   # examples to pull from Reddit
+GENERATED_COUNT = 5    # examples to sample from existing generated content
 
 # ── Reddit source config ────────────────────────────────────────────────────────
 # Hot feed only — we don't need weekly/monthly ranges because the existing
@@ -152,7 +152,7 @@ Now generate 35 NEW, ORIGINAL shower thoughts. Rules:
 - Genuinely mind-bending — not "clever-sounding but obvious"
 - Avoid clichés like "if you think about it" or "have you ever noticed"
 - No politics, no religion bashing
-- Output the 35 thoughts one per entry, separated by a blank line""",
+- Output the 20 thoughts one per entry, separated by a blank line""",
 
     "motivational": """\
 You are generating motivational quotes for an app. They should feel like real quotes — \
@@ -171,7 +171,7 @@ Now generate 35 NEW, ORIGINAL motivational quotes. Rules:
 - Vary the length: some short and punchy, some longer and philosophical
 - Feel authentic and earned, not like corporate motivational posters
 - No numbering, no bullets, no prefixes
-- Output the 35 quotes one per entry, separated by a blank line""",
+- Output the 20 quotes one per entry, separated by a blank line""",
 
     "darkjoke": """\
 You are generating dark humor jokes for an app. They must be genuinely funny with real \
@@ -189,7 +189,7 @@ Now generate 35 NEW, ORIGINAL dark jokes. Rules:
 - Dark but not gratuitously offensive — punch up or sideways, not pure shock value
 - Vary the format: one-liners, two-liners, short anecdotes
 - No numbering, no bullets, no prefixes
-- Output the 35 jokes one per entry, separated by a blank line""",
+- Output the 20 jokes one per entry, separated by a blank line""",
 }
 
 
@@ -266,7 +266,7 @@ def generate_with_claude(
 
     message = client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=4096,
+        max_tokens=2048,
         messages=[{"role": "user", "content": prompt}],
     )
 
@@ -281,7 +281,7 @@ def generate_with_claude(
             continue
         filtered.append(entry)
 
-    return filtered[:35]
+    return filtered[:20]
 
 
 # ── Step 3: Build output JSON ───────────────────────────────────────────────────
