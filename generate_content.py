@@ -2,11 +2,14 @@
 """
 Sparks Content Generation Pipeline
 ====================================
-1. Scrapes Reddit for real style examples (10-15 per category)
-2. Uses Claude API to generate 35 new original entries per category
-3. Saves the result as sparks_content.json
-4. Pushes it to a public GitHub repo via the GitHub API
-   → The app fetches the raw file from raw.githubusercontent.com
+Each run:
+1. Fetches the top 15 posts from Reddit per category (hot feed only)
+2. Pulls 10 random entries from the existing generated content on GitHub
+3. Combines them (up to 25 style examples) and asks Claude to generate 35 new entries
+4. Pushes the new sparks_content.json back to GitHub
+
+Using the existing generated content as part of the style input means Claude
+sees fresh variation every run, even when Reddit hasn't changed much.
 
 Usage:
     python generate_content.py
@@ -18,6 +21,7 @@ Requirements:
 import os
 import json
 import base64
+import random
 import datetime
 import requests
 import anthropic
@@ -28,24 +32,33 @@ load_dotenv()
 # ── Config ─────────────────────────────────────────────────────────────────────
 
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
-GITHUB_TOKEN      = os.getenv("GITHUB_TOKEN")       # Personal Access Token (repo scope)
-GITHUB_OWNER      = os.getenv("GITHUB_OWNER")       # Your GitHub username
-GITHUB_REPO       = os.getenv("GITHUB_REPO")        # e.g. "sparks-content"
+GITHUB_TOKEN      = os.getenv("GITHUB_TOKEN")
+GITHUB_OWNER      = os.getenv("GITHUB_OWNER")
+GITHUB_REPO       = os.getenv("GITHUB_REPO")
 GITHUB_BRANCH     = os.getenv("GITHUB_BRANCH", "main")
+
+# URL of the current published content — sampled as style examples each run
+CONTENT_URL = (
+    f"https://raw.githubusercontent.com/{os.getenv('GITHUB_OWNER', 'aniketsahay')}"
+    f"/{os.getenv('GITHUB_REPO', 'sparks-content')}/main/sparks_content.json"
+)
 
 TODAY        = datetime.date.today().strftime("%Y%m%d")
 DATE_DISPLAY = datetime.date.today().strftime("%Y-%m-%d")
 GENERATED_AT = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 
-REDDIT_HEADERS = {"User-Agent": "SparksContentGen/1.0"}
+REDDIT_HEADERS  = {"User-Agent": "SparksContentGen/1.0"}
+REDDIT_COUNT    = 15   # examples to pull from Reddit
+GENERATED_COUNT = 10   # examples to sample from existing generated content
 
 # ── Reddit source config ────────────────────────────────────────────────────────
+# Hot feed only — we don't need weekly/monthly ranges because the existing
+# generated content already provides variety between runs.
 
 REDDIT_SOURCES = {
     "shower": {
         "urls": [
             "https://www.reddit.com/r/Showerthoughts/hot.json?limit=100",
-            "https://www.reddit.com/r/Showerthoughts/top.json?t=week&limit=100",
         ],
         "filter": lambda p: (
             not p.get("over_18") and
@@ -55,14 +68,11 @@ REDDIT_SOURCES = {
             p.get("score", 0) > 50
         ),
         "transform": lambda p: p["title"],
-        "count": 15,
     },
     "motivational": {
         "urls": [
             "https://www.reddit.com/r/GetMotivated/hot.json?limit=100",
-            "https://www.reddit.com/r/GetMotivated/top.json?t=week&limit=100",
             "https://www.reddit.com/r/quotes/hot.json?limit=100",
-            "https://www.reddit.com/r/quotes/top.json?t=week&limit=100",
         ],
         "filter": lambda p: (
             not p.get("over_18") and
@@ -77,14 +87,11 @@ REDDIT_SOURCES = {
         "transform": lambda p: (
             p["title"].replace("[Quote]", "").replace("[quote]", "").strip()
         ),
-        "count": 15,
     },
     "darkjoke": {
         "urls": [
             "https://www.reddit.com/r/darkjokes/hot.json?limit=100",
-            "https://www.reddit.com/r/darkjokes/top.json?t=week&limit=100",
             "https://www.reddit.com/r/DarkHumor/hot.json?limit=100",
-            "https://www.reddit.com/r/DarkHumor/top.json?t=week&limit=100",
         ],
         "filter": lambda p: (
             not p.get("over_18") and
@@ -97,12 +104,10 @@ REDDIT_SOURCES = {
             f"{p['title']}\n\n{p['selftext']}"
             if p.get("selftext") else p["title"]
         ),
-        "count": 15,
     },
 }
 
 # ── Fallback examples ──────────────────────────────────────────────────────────
-# Used when Reddit is unreachable — keeps the script from crashing.
 
 FALLBACK_EXAMPLES = {
     "shower": [
@@ -135,16 +140,16 @@ PROMPTS = {
 You are generating original Shower Thoughts for an app. These are genuine observations \
 that make people pause and say "wait... that's actually true."
 
-Here are {count} real examples from Reddit's r/Showerthoughts (sorted by upvotes) to \
-set the tone and style:
+Here are style examples — a mix of real Reddit posts and previously generated entries \
+— to set the tone:
 
 {examples}
 
 Now generate 35 NEW, ORIGINAL shower thoughts. Rules:
-- Each is a standalone sentence or two — no numbering, bullets, or prefixes like "Here's one:"
+- Each is a standalone sentence or two — no numbering, bullets, or prefixes
 - Do NOT copy or paraphrase any of the examples above
 - Vary the length: some short and punchy, some 2-3 sentences
-- They should be genuinely mind-bending — not "clever-sounding but obvious"
+- Genuinely mind-bending — not "clever-sounding but obvious"
 - Avoid clichés like "if you think about it" or "have you ever noticed"
 - No politics, no religion bashing
 - Output the 35 thoughts one per entry, separated by a blank line""",
@@ -153,18 +158,18 @@ Now generate 35 NEW, ORIGINAL shower thoughts. Rules:
 You are generating motivational quotes for an app. They should feel like real quotes — \
 the kind you'd screenshot and save.
 
-Here are {count} real examples from Reddit's r/GetMotivated and r/quotes (sorted by \
-upvotes) to set the tone:
+Here are style examples — a mix of real Reddit posts and previously generated entries \
+— to set the tone:
 
 {examples}
 
 Now generate 35 NEW, ORIGINAL motivational quotes. Rules:
-- Each ends with an attribution like "— [Name]", "— Unknown", or "— Ancient Proverb"
-- You can attribute to real historical figures, real authors, or use "— Unknown"
-- Do NOT use living celebrities or current public figures as the attribution
+- Each ends with an attribution: "— [Name]", "— Unknown", or "— Ancient Proverb"
+- Attribute to real historical figures, real authors, or use "— Unknown"
+- Do NOT use living celebrities or current public figures
 - Do NOT copy or paraphrase any of the examples above
 - Vary the length: some short and punchy, some longer and philosophical
-- They should feel authentic and earned, not like corporate motivational posters
+- Feel authentic and earned, not like corporate motivational posters
 - No numbering, no bullets, no prefixes
 - Output the 35 quotes one per entry, separated by a blank line""",
 
@@ -172,8 +177,8 @@ Now generate 35 NEW, ORIGINAL motivational quotes. Rules:
 You are generating dark humor jokes for an app. They must be genuinely funny with real \
 punchlines — not just edgy observations.
 
-Here are {count} real examples from Reddit's r/darkjokes and r/DarkHumor (sorted by \
-upvotes) to set the tone:
+Here are style examples — a mix of real Reddit posts and previously generated entries \
+— to set the tone:
 
 {examples}
 
@@ -184,18 +189,16 @@ Now generate 35 NEW, ORIGINAL dark jokes. Rules:
 - Dark but not gratuitously offensive — punch up or sideways, not pure shock value
 - Vary the format: one-liners, two-liners, short anecdotes
 - No numbering, no bullets, no prefixes
-- Output the 35 jokes one per entry, separated by a blank line (two-liners = two lines \
-within the same entry)""",
+- Output the 35 jokes one per entry, separated by a blank line""",
 }
 
 
-# ── Step 1: Scrape Reddit ───────────────────────────────────────────────────────
+# ── Step 1a: Fetch Reddit examples ─────────────────────────────────────────────
 
 def fetch_reddit_examples(category: str) -> list[str]:
     """
-    Fetches posts from Reddit for the given category and returns the
-    top-scoring ones as plain text strings.
-    Falls back to hardcoded examples if Reddit is unreachable.
+    Pulls hot posts from Reddit, filters them, and returns up to REDDIT_COUNT
+    as plain text strings sorted by score.
     """
     config = REDDIT_SOURCES[category]
     posts = []
@@ -205,8 +208,7 @@ def fetch_reddit_examples(category: str) -> list[str]:
         try:
             resp = requests.get(url, headers=REDDIT_HEADERS, timeout=10)
             resp.raise_for_status()
-            data = resp.json()
-            for item in data.get("data", {}).get("children", []):
+            for item in resp.json().get("data", {}).get("children", []):
                 p = item.get("data", {})
                 pid = p.get("id", "")
                 if pid in seen_ids:
@@ -218,12 +220,35 @@ def fetch_reddit_examples(category: str) -> list[str]:
             print(f"    Warning: could not fetch {url} — {exc}")
 
     if not posts:
-        print(f"    Warning: no posts for {category}, using fallback examples")
+        print(f"    Warning: no Reddit posts for {category}, using fallback")
         return FALLBACK_EXAMPLES[category]
 
     posts.sort(key=lambda p: p.get("score", 0), reverse=True)
-    top = posts[:config["count"]]
-    return [config["transform"](p) for p in top]
+    return [config["transform"](p) for p in posts[:REDDIT_COUNT]]
+
+
+# ── Step 1b: Sample from existing generated content ────────────────────────────
+
+def fetch_existing_samples(category: str) -> list[str]:
+    """
+    Downloads the current sparks_content.json from GitHub and returns
+    GENERATED_COUNT randomly sampled entries for the given category as strings.
+    Returns [] on first run (when the file doesn't exist yet).
+    """
+    try:
+        resp = requests.get(CONTENT_URL, timeout=10)
+        if resp.status_code == 404:
+            return []  # First run — no existing content yet
+        resp.raise_for_status()
+        data = resp.json()
+        entries = data.get("content", {}).get(category, [])
+        if not entries:
+            return []
+        sample = random.sample(entries, min(GENERATED_COUNT, len(entries)))
+        return [e["thought"] for e in sample]
+    except Exception as exc:
+        print(f"    Warning: could not fetch existing content — {exc}")
+        return []
 
 
 # ── Step 2: Generate with Claude ────────────────────────────────────────────────
@@ -234,10 +259,10 @@ def generate_with_claude(
     client: anthropic.Anthropic,
 ) -> list[str]:
     """
-    Sends the examples to Claude and returns a list of up to 35 generated strings.
+    Sends combined style examples to Claude and returns up to 35 new entries.
     """
     examples_text = "\n".join(f"• {ex}" for ex in examples)
-    prompt = PROMPTS[category].format(examples=examples_text, count=len(examples))
+    prompt = PROMPTS[category].format(examples=examples_text)
 
     message = client.messages.create(
         model="claude-haiku-4-5-20251001",
@@ -246,15 +271,11 @@ def generate_with_claude(
     )
 
     raw = message.content[0].text.strip()
-
-    # Each entry is separated by a blank line
     entries = [block.strip() for block in raw.split("\n\n") if block.strip()]
 
-    # Drop any meta-commentary Claude might prepend
     filtered = []
     for entry in entries:
-        lower = entry.lower()
-        if lower.startswith(("here are", "sure,", "certainly", "of course")):
+        if entry.lower().startswith(("here are", "sure,", "certainly", "of course")):
             continue
         if len(entry) < 10:
             continue
@@ -266,9 +287,6 @@ def generate_with_claude(
 # ── Step 3: Build output JSON ───────────────────────────────────────────────────
 
 def build_output_json(content_map: dict[str, list[str]]) -> dict:
-    """
-    Wraps generated strings in the structured format the app expects.
-    """
     prefix_map = {"shower": "shower", "motivational": "motiv", "darkjoke": "dark"}
 
     output = {
@@ -295,16 +313,8 @@ def build_output_json(content_map: dict[str, list[str]]) -> dict:
 # ── Step 4: Push to GitHub ─────────────────────────────────────────────────────
 
 def push_to_github(local_path: str) -> str:
-    """
-    Creates or updates sparks_content.json in the configured GitHub repo
-    using the GitHub Contents API. No local git installation needed.
-
-    Returns the raw.githubusercontent.com URL the app can fetch from.
-    """
     if not all([GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO]):
-        raise ValueError(
-            "GITHUB_TOKEN, GITHUB_OWNER, and GITHUB_REPO must all be set in .env"
-        )
+        raise ValueError("GITHUB_TOKEN, GITHUB_OWNER, and GITHUB_REPO must be set in .env")
 
     file_path = "sparks_content.json"
     api_url = (
@@ -316,11 +326,9 @@ def push_to_github(local_path: str) -> str:
         "Accept": "application/vnd.github.v3+json",
     }
 
-    # Read local file and base64-encode it (required by the GitHub API)
     with open(local_path, "rb") as f:
-        encoded = base64.b64encode(f.read()).decode("utf-8")
+        encoded = base64.b64encode(f.read()).decode()
 
-    # If the file already exists we need its current SHA to update it
     sha = None
     try:
         check = requests.get(api_url, headers=headers, params={"ref": GITHUB_BRANCH})
@@ -335,16 +343,15 @@ def push_to_github(local_path: str) -> str:
         "branch": GITHUB_BRANCH,
     }
     if sha:
-        payload["sha"] = sha  # Required when updating an existing file
+        payload["sha"] = sha
 
     resp = requests.put(api_url, headers=headers, json=payload)
     resp.raise_for_status()
 
-    raw_url = (
+    return (
         f"https://raw.githubusercontent.com/{GITHUB_OWNER}/{GITHUB_REPO}"
         f"/{GITHUB_BRANCH}/{file_path}"
     )
-    return raw_url
 
 
 # ── Main ────────────────────────────────────────────────────────────────────────
@@ -355,30 +362,37 @@ def main():
     print(f"  {DATE_DISPLAY}")
     print("=" * 60)
 
-    # 1. Scrape Reddit
-    examples: dict[str, list[str]] = {}
-    for category in ["shower", "motivational", "darkjoke"]:
-        print(f"\n[1/4] Fetching Reddit examples — {category}...")
-        examples[category] = fetch_reddit_examples(category)
-        print(f"    → {len(examples[category])} examples collected")
-
-    # 2. Generate with Claude
     if not ANTHROPIC_API_KEY:
-        raise ValueError(
-            "ANTHROPIC_API_KEY not set.\nAdd it to .env: ANTHROPIC_API_KEY=sk-ant-..."
-        )
+        raise ValueError("ANTHROPIC_API_KEY not set in .env")
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
     generated: dict[str, list[str]] = {}
 
     for category in ["shower", "motivational", "darkjoke"]:
-        print(f"\n[2/4] Generating {category} content with Claude...")
-        entries = generate_with_claude(category, examples[category], client)
-        generated[category] = entries
-        print(f"    → {len(entries)} entries generated")
+        print(f"\n── {category} ──────────────────────────────────────────")
 
-    # 3. Build and save JSON locally
-    print(f"\n[3/4] Building output JSON...")
+        # 1a. Reddit examples (hot feed, top 15 by score)
+        print(f"  Fetching Reddit examples...")
+        reddit_examples = fetch_reddit_examples(category)
+        print(f"    → {len(reddit_examples)} from Reddit")
+
+        # 1b. Sample from existing generated content
+        print(f"  Sampling existing generated content...")
+        generated_samples = fetch_existing_samples(category)
+        print(f"    → {len(generated_samples)} from previous run")
+
+        # Combine: Reddit first (higher weight as anchors), then generated samples
+        combined_examples = reddit_examples + generated_samples
+        print(f"    → {len(combined_examples)} total style examples")
+
+        # 2. Generate 35 new entries
+        print(f"  Generating with Claude...")
+        entries = generate_with_claude(category, combined_examples, client)
+        generated[category] = entries
+        print(f"    → {len(entries)} new entries generated")
+
+    # 3. Build and save JSON
+    print(f"\n── Output ──────────────────────────────────────────────")
     output = build_output_json(generated)
 
     local_path = "sparks_content.json"
@@ -386,22 +400,18 @@ def main():
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     total = sum(len(v) for v in output["content"].values())
-    print(f"    → {total} total entries saved to {local_path}")
+    print(f"  {total} total entries saved to {local_path}")
 
     # 4. Push to GitHub
-    print(f"\n[4/4] Pushing to GitHub...")
+    print(f"  Pushing to GitHub...")
     try:
         url = push_to_github(local_path)
         print(f"\n{'=' * 60}")
-        print(f"  Done!")
-        print(f"  Raw URL: {url}")
-        print(f"\n  Paste this into redditService.js as GENERATED_CONTENT_URL")
-        print(f"  (only needed once — the URL stays the same on every run)")
+        print(f"  Done! → {url}")
         print(f"{'=' * 60}\n")
     except Exception as exc:
         print(f"\n  Warning: GitHub push failed — {exc}")
-        print(f"  Content saved locally to {local_path}")
-        print(f"  Check GITHUB_TOKEN / GITHUB_OWNER / GITHUB_REPO in .env\n")
+        print(f"  Content saved locally to {local_path}\n")
 
 
 if __name__ == "__main__":
