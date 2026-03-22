@@ -1,0 +1,30 @@
+name: Generate Content
+
+on:
+  schedule:
+    - cron: '0 3 */3 * *'   # Every 3 days at 3 AM UTC
+  workflow_dispatch:          # Manual trigger from GitHub UI
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic requests python-dotenv
+
+      - name: Generate and push content
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_OWNER: aniketsahay
+          GITHUB_REPO: sparks-content
+          GITHUB_BRANCH: main
+        run: python generate_content.py
