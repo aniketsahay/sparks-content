@@ -1,0 +1,624 @@
+{
+  "version": "2026-03-23",
+  "generated_at": "2026-03-22T23:00:49Z",
+  "content": {
+    "shower": [
+      {
+        "id": "gen_shower_20260323_001",
+        "thought": "We spend the first 18 years of our lives in school learning to follow instructions, then the next 40 years being paid to break them.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_002",
+        "thought": "You've probably seen thousands of people sleep, but you've never actually watched yourself sleep.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_003",
+        "thought": "The fact that we invented passwords to protect information we care about means we now regularly type our most important secrets into devices we carry everywhere.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_004",
+        "thought": "Mirrors show you what you look like, but they never show you what your face looks like when you're not looking at a mirror.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_005",
+        "thought": "If a tree falls in the forest and there's no one around, it probably makes a sound that no one will ever describe accurately because no one was there to compare it to anything else.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_006",
+        "thought": "Dogs have been evolving alongside humans for thousands of years, and they still haven't figured out that the ball isn't coming back until you let go of it.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_007",
+        "thought": "We call it \"falling asleep\" but nobody has ever actually fallen — you just kind of... stop.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_008",
+        "thought": "The invention of the snooze button might be humanity's most perfect metaphor for how we handle every major problem.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_009",
+        "thought": "Somewhere right now, someone is being fired for the exact same mistake that someone else is being promoted for not catching earlier.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_010",
+        "thought": "You can taste the difference between tap water and bottled water, but you probably can't taste the difference between water and whatever was in your mouth before you drank it.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_011",
+        "thought": "Every person alive has a ranking of their friends, and nobody has ever seen their own ranking.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_012",
+        "thought": "Penmanship was a core school subject because it was how you'd prove you were educated, but now being able to write legibly is actually kind of a red flag that you're not a native computer user.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_013",
+        "thought": "The reason we're all tired might not be because we sleep too little, but because we think about sleeping too much.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_014",
+        "thought": "Humidity is just the Earth sweating, and we all act inconvenienced by it as if we're not mostly made of water ourselves.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_015",
+        "thought": "If someone invented a machine that could perfectly predict when you'd die, it would instantly become the worst invention in human history because everyone would need to know.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_016",
+        "thought": "We teach kids that lying is wrong, then spend their teenage years punishing them for being honest about how they actually feel.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_017",
+        "thought": "A stopped clock is right twice a day, but a broken compass is wrong from every direction at once.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_018",
+        "thought": "You can observe someone for years and think you know them, then they'll laugh at something unfunny and you'll realize you never understood them at all.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_019",
+        "thought": "Most of your decisions are made by a version of you that existed several seconds ago, and you're just experiencing the aftermath and calling it choice.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_020",
+        "thought": "The reason restaurants dim the lights isn't for ambiance — it's because the food looks better when you can't see it clearly.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_021",
+        "thought": "We invented glasses to help us see better, but that means everyone who wears them can't actually see what they look like without them.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_022",
+        "thought": "Your car is probably the second-most expensive thing you own, and you let it sit idle 23 hours a day like it's a piece of furniture.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_023",
+        "thought": "The only time you'll ever know if you're actually funny is if someone laughs when you're not trying to be, which is the one time you can't take credit for it.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_024",
+        "thought": "Congrats is short for congratulations, but somehow \"congrats\" sounds more genuine while \"congratulations\" sounds like you might be mad.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_025",
+        "thought": "If aliens visited Earth, we'd probably spend the first three years fighting over whether they were real instead of preparing for them.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_026",
+        "thought": "We've all had conversations with people where we nodded along to what they said, but we were really just waiting for them to finish so we could leave.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_027",
+        "thought": "The longer you live, the more dead people you know, so theoretically the saddest most people ever get might not be in their youth but somewhere in their 70s.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_028",
+        "thought": "Every phone notification you receive is a tiny person in your pocket urgently trying to get your attention.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_029",
+        "thought": "We trust AI with our navigation, our predictions, our conversations — everything except our money, which is the one thing that actually only matters.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_030",
+        "thought": "Your future self is a different person than your current self, so technically all your long-term plans are you trying to make someone else's life better.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_031",
+        "thought": "If parallel universes exist, there's probably a version of you who made the opposite choice every single time, and that version thinks they're the normal one.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_032",
+        "thought": "Autocorrect has changed what it means to love something — now if you love it, your phone will immediately try to turn it into \"I love you.\"",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_033",
+        "thought": "The scariest part of getting older isn't that you can't do things anymore — it's that you stop wanting to.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_034",
+        "thought": "We all agreed that emojis would improve text communication, but now a single emoji can completely change the tone of something in ways you can't control.",
+        "type": "shower",
+        "source": "generated"
+      },
+      {
+        "id": "gen_shower_20260323_035",
+        "thought": "People say \"I'm sleeping in tomorrow\" as if they have a choice, as if sleep respects your schedule.",
+        "type": "shower",
+        "source": "generated"
+      }
+    ],
+    "motivational": [
+      {
+        "id": "gen_motiv_20260323_001",
+        "thought": "The person who can admit they were wrong yesterday is stronger than the person who pretends they were right. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_002",
+        "thought": "You don't find your purpose by thinking about it. You find it by doing something and paying attention to when you stop watching the clock. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_003",
+        "thought": "Comparison is the tax you pay for spending time in someone else's life. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_004",
+        "thought": "The only way to avoid criticism is to do nothing, say nothing, and be nothing. But then you'll criticize yourself anyway. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_005",
+        "thought": "We accept the love we think we deserve. The tragedy isn't falling short of it—it's not even trying. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_006",
+        "thought": "If you're waiting for the right time, you've already decided it's not now. And now is the only time you have. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_007",
+        "thought": "Ambition without self-awareness is just expensive failure waiting to happen. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_008",
+        "thought": "The distance between who you are and who you want to be is shorter than the distance between knowing and doing. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_009",
+        "thought": "Most of your regrets won't be about what you tried and failed at. They'll be about what you were too afraid to attempt. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_010",
+        "thought": "You can't think your way into becoming someone new. You have to act your way into it. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_011",
+        "thought": "The people who seem like they have it figured out are usually just better at hiding how confused they are. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_012",
+        "thought": "Discipline is just deciding that what you want tomorrow matters more than what you want right now. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_013",
+        "thought": "Your potential is infinite. Your time is not. Start with that math. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_014",
+        "thought": "The version of you that exists in other people's heads will never be as interesting as the one you could actually become. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_015",
+        "thought": "Excellence is not a destination where you finally rest. It's a direction you choose every single day. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_016",
+        "thought": "You can't hate someone into changing. You can't shame them into growing. The only person those tools work on is yourself. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_017",
+        "thought": "What looks like overnight success in someone else's life usually took them invisible years to build. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_018",
+        "thought": "Resentment is the cost of staying silent about what matters to you. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_019",
+        "thought": "The person you'll be in five years depends almost entirely on what you do when no one is watching. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_020",
+        "thought": "You don't become confident by feeling ready. You become ready by acting confident. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_021",
+        "thought": "The gap between talking about your dreams and actually pursuing them is filled with a thousand small decisions you make every day. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_022",
+        "thought": "Most people fail not because they lack talent, but because they lack the willingness to be uncomfortable for long enough. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_023",
+        "thought": "Your past doesn't predict your future unless you use it as an excuse instead of a lesson. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_024",
+        "thought": "The person you're afraid of becoming is often the person you're capable of becoming. Fear isn't a warning—it's a map. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_025",
+        "thought": "Mediocrity is comfortable. That's why so many people choose it. And that's why it's not for you. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_026",
+        "thought": "You don't need permission to start. You never did. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_027",
+        "thought": "The only real failure is the one you don't learn from. Everything else is just data. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_028",
+        "thought": "Growth happens when you stop doing what's easy and start doing what matters. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_029",
+        "thought": "Your excuses are well-rehearsed because you've been practicing them for years. Try practicing something else. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_030",
+        "thought": "The person you become depends on which voice you listen to when you're alone. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_031",
+        "thought": "Motivation is temporary. Character is permanent. Build the second and the first becomes irrelevant. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_032",
+        "thought": "What you do today echoes into a thousand tomorrows. Start paying attention to the echo. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_033",
+        "thought": "The only person whose approval you desperately need is the one staring back at you in the mirror. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260323_034",
+        "thought": "You're not behind. You're not running out of time. You're exactly where you need to be to become who you're meant to be. — Unknown",
+        "type": "motivational",
+        "source": "generated"
+      }
+    ],
+    "darkjoke": [
+      {
+        "id": "gen_dark_20260323_001",
+        "thought": "I told my friend he was drawing his eyebrows too high.\nHe looked surprised.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_002",
+        "thought": "My grandfather said, \"Your generation is too reliant on technology.\"\nI unplugged his life support to prove him wrong.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_003",
+        "thought": "I have a stepladder because my real ladder left when I was just a kid.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_004",
+        "thought": "What's the difference between my job and a relationship?\nMy job said they'd let me down easy.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_005",
+        "thought": "My dentist told me to stop eating sweets.\nI guess he doesn't want his business doing well.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_006",
+        "thought": "I used to play Russian roulette with a handgun.\nThen I realized how inefficient it was.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_007",
+        "thought": "They say money can't buy happiness.\nBut it can buy a jet ski. Ever seen a sad person on a jet ski? That's because they drowned.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_008",
+        "thought": "My therapist asked about my childhood.\nI told her it was great until my parents moved out.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_009",
+        "thought": "I'm reading a book on the history of glue.\nCan't put it down.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_010",
+        "thought": "My wife threatened to leave me because of my gambling addiction.\nI told her the odds of that happening were pretty good.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_011",
+        "thought": "What's the difference between a poorly dressed man on a bike and a well-dressed man on a tricycle?\nAttire.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_012",
+        "thought": "I told my kids that Santa wasn't real.\nThey took it better than my wife did.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_013",
+        "thought": "Parallel lines have so much in common.\nIt's a shame they'll never meet.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_014",
+        "thought": "I was wondering why the baseball kept getting larger.\nThen it hit me.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_015",
+        "thought": "My friend is scared of elevators.\nSo he's been taking steps to avoid them.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_016",
+        "thought": "I started a support group for procrastinators.\nWe haven't met yet.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_017",
+        "thought": "My father said he was going out for cigarettes 20 years ago.\nAt this point, I'm just impressed by his commitment to the bit.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_018",
+        "thought": "What do you call a fake noodle?\nAn impasta. My son's death wish came true when he wouldn't stop with the puns.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_019",
+        "thought": "I'd tell you my secret to staying young, but I'd have to kill you.\nFortunately, I'm working through some things.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_020",
+        "thought": "My dating profile says I'm a \"glass half full\" kind of guy.\nThe half that's left is poison.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_021",
+        "thought": "I'm terrible at giving directions.\nMy therapist says I need to work through some issues first, but he won't tell me where.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_022",
+        "thought": "My friend asked me to help him move.\nI said, \"You'll have to get over it eventually.\"",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_023",
+        "thought": "I told my wife she was drawing her eyebrows too low.\nShe looked angry.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_024",
+        "thought": "The worst thing about being a time traveler is knowing how the story ends.\nThe second worst is the car accident.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_025",
+        "thought": "My wife said I spend too much time on my phone.\nI didn't respond because I was watching her funeral livestream.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_026",
+        "thought": "I used to be addicted to soap.\nBut I'm clean now.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_027",
+        "thought": "My son asked me if he was adopted.\nI said, \"Not yet, but we're working on it.\"",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_028",
+        "thought": "The scariest part about being a ghost is realizing nobody cares enough to hold a séance.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_029",
+        "thought": "I told my boss I needed a raise to support my family.\nHe said, \"Your family has jobs.\"",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_030",
+        "thought": "My friend is obsessed with checking himself into mental hospitals.\nI said, \"Dude, just check yourself,\" and he really took that to heart.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_031",
+        "thought": "People keep asking me how I deal with rejection.\nI don't. I just add them to my list.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_032",
+        "thought": "I'm writing a book about denial.\nIt's not coming out.",
+        "type": "darkjoke",
+        "source": "generated"
+      },
+      {
+        "id": "gen_dark_20260323_033",
+        "thought": "I tried to tell my friend a secret at the cemetery.\nHe just wouldn't let it go.",
+        "type": "darkjoke",
+        "source": "generated"
+      }
+    ]
+  }
+}
