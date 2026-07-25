@@ -1,369 +1,369 @@
 {
-  "version": "2026-07-22",
-  "generated_at": "2026-07-22T05:43:56Z",
+  "version": "2026-07-25",
+  "generated_at": "2026-07-25T05:39:09Z",
   "content": {
     "shower": [
       {
-        "id": "gen_shower_20260722_001",
-        "thought": "We spend the first part of our lives learning rules we spend the second part breaking.",
+        "id": "gen_shower_20260725_001",
+        "thought": "We spend years learning to read other people's minds, then call it a skill instead of admitting we're all just guessing.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_002",
-        "thought": "Your phone knows more about you than you know about yourself, but it can't tell you who you are.",
+        "id": "gen_shower_20260725_002",
+        "thought": "The people who hurt you the most are usually the ones who showed you they could care about you first.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_003",
-        "thought": "The only reason you remember most of your childhood is because other people keep reminding you it happened.",
+        "id": "gen_shower_20260725_003",
+        "thought": "You've probably had the same conversation with different people so many times that you've forgotten who you originally stole it from.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_004",
-        "thought": "You've been a different person every seven years, but you call yourself the same name.",
+        "id": "gen_shower_20260725_004",
+        "thought": "Time moves slower when you're waiting for something and faster when you're trying to hold onto it, which means your perception of time is just measuring how much you want something to stay.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_005",
-        "thought": "Embarrassment is just realizing that someone else's memory is now better than yours.",
+        "id": "gen_shower_20260725_005",
+        "thought": "Most of your opinions aren't actually yours—they're just the first version you heard presented confidently.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_006",
-        "thought": "The worst part about keeping a secret isn't hiding it — it's knowing someone else knows and didn't tell you they know.",
+        "id": "gen_shower_20260725_006",
+        "thought": "You can't remember most of what you've learned, but you also can't do most of what you do without it.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_007",
-        "thought": "You can't actually imagine a new color, which means your mind is only ever remixing what it's already seen.",
+        "id": "gen_shower_20260725_007",
+        "thought": "The things that make you feel alive are often the things that prove how fragile your life actually is.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_008",
-        "thought": "Most of your life is spent trying to get back to how you felt at a specific moment that wasn't even that good when it was happening.",
+        "id": "gen_shower_20260725_008",
+        "thought": "You're constantly being shaped by people who have no idea they're shaping you.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_009",
-        "thought": "You trust your friends with your secrets but not with your passwords, which is exactly backwards.",
+        "id": "gen_shower_20260725_009",
+        "thought": "Boredom might just be your brain refusing to pretend something matters when it doesn't.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_010",
-        "thought": "Every conversation ends with one person deciding it's over, and the other person just goes along with it.",
+        "id": "gen_shower_20260725_010",
+        "thought": "We treat our bodies like we're going to trade them in for a better model someday.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_011",
-        "thought": "Time moves faster the older you get because each year becomes a smaller percentage of your life — which means you're literally feeling math.",
+        "id": "gen_shower_20260725_011",
+        "thought": "The older you get, the faster time moves, which means life accelerates just as you're finally starting to understand what you're doing.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_012",
-        "thought": "You can't know if someone is lying to you as much as you can know if they're telling you something they believe is true.",
+        "id": "gen_shower_20260725_012",
+        "thought": "Every person you'll never meet made decisions today that will somehow affect your future.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_013",
-        "thought": "The worst decisions you've made were probably the most confident ones.",
+        "id": "gen_shower_20260725_013",
+        "thought": "You can't actually prove that other people experience color the way you do, so you've been trusting strangers about reality your entire life.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_014",
-        "thought": "You're nostalgic for times when you weren't happy, just times when you were distracted.",
+        "id": "gen_shower_20260725_014",
+        "thought": "The parts of yourself you hate the most are usually the parts that keep you safe.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_015",
-        "thought": "Someone out there is having the worst day of their life while you're having an ordinary Tuesday.",
+        "id": "gen_shower_20260725_015",
+        "thought": "Comfort is just a prison you decorated yourself.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_016",
-        "thought": "We mourn people we never properly knew because we loved the version of them we invented.",
+        "id": "gen_shower_20260725_016",
+        "thought": "You spend the first part of your life learning how to be yourself and the rest of your life trying to hide it.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_017",
-        "thought": "Your body is replacing itself constantly, so technically you're already a different person — you're just too slow to notice.",
+        "id": "gen_shower_20260725_017",
+        "thought": "The only reason you're not paranoid about all the things that could go wrong is because statistically most of them won't, but that's not the same as it being safe.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_018",
-        "thought": "You can't go home again because home isn't a place, it's a person you were.",
+        "id": "gen_shower_20260725_018",
+        "thought": "People confuse honesty with wisdom all the time—a fool can tell the truth, it just feels true because they're saying it.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_019",
-        "thought": "The scariest monsters in movies are just people who stopped listening to the world telling them no.",
+        "id": "gen_shower_20260725_019",
+        "thought": "Most disagreements end not because someone was proven wrong, but because they got tired of explaining themselves.",
         "type": "shower",
         "source": "generated"
       },
       {
-        "id": "gen_shower_20260722_020",
-        "thought": "Boredom is just your brain asking for something harder to do, and you usually respond by giving it something easier.",
+        "id": "gen_shower_20260725_020",
+        "thought": "Your sense of humor is just a map of the things you've decided aren't worth taking seriously anymore.",
         "type": "shower",
         "source": "generated"
       }
     ],
     "motivational": [
       {
-        "id": "gen_motiv_20260722_001",
-        "thought": "The master has failed more times than the beginner has even tried. — Stephen McCranie",
+        "id": "gen_motiv_20260725_001",
+        "thought": "The man who moves a mountain begins by carrying away small stones. — Confucius",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_002",
-        "thought": "Your future self is watching you right now through memories you haven't made yet. — Unknown",
+        "id": "gen_motiv_20260725_002",
+        "thought": "Comparison is the thief of joy. — Theodore Roosevelt",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_003",
-        "thought": "What lies behind us and what lies before us are tiny matters compared to what lies within us. — Ralph Waldo Emerson",
+        "id": "gen_motiv_20260725_003",
+        "thought": "Your limitation—it's only your lack of vision. — Muhammad Ali",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_004",
-        "thought": "You are not lazy. You are just working toward the wrong things. — Unknown",
-        "type": "motivational",
-        "source": "generated"
-      },
-      {
-        "id": "gen_motiv_20260722_005",
+        "id": "gen_motiv_20260725_004",
         "thought": "The cave you fear to enter holds the treasure you seek. — Joseph Campbell",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_006",
-        "thought": "Comparison is the thief of joy, but it's also the thief of your potential. — Unknown",
+        "id": "gen_motiv_20260725_005",
+        "thought": "Don't watch the clock; do what it does. Keep going. — Sam Levenson",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_007",
-        "thought": "Small progress is still progress. A step forward beats a thousand plans. — Unknown",
+        "id": "gen_motiv_20260725_006",
+        "thought": "Discipline is choosing between what you want now and what you want most. — Unknown",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_008",
-        "thought": "Fear is just excitement without breath. — Fritz Perls",
+        "id": "gen_motiv_20260725_007",
+        "thought": "The only way out is through. — Robert Frost",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_009",
+        "id": "gen_motiv_20260725_008",
+        "thought": "You are not a drop in the ocean. You are the entire ocean in a drop. — Rumi",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260725_009",
+        "thought": "Most of life's failures are people who did not realize how close they were to success when they gave up. — Thomas Edison",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260725_010",
+        "thought": "Suffering ceases to be suffering at the moment it finds a meaning. — Viktor Frankl",
+        "type": "motivational",
+        "source": "generated"
+      },
+      {
+        "id": "gen_motiv_20260725_011",
         "thought": "The best time to plant a tree was 20 years ago. The second best time is now. — Ancient Proverb",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_010",
-        "thought": "Your limitations are mostly just the edge of your effort. — Unknown",
+        "id": "gen_motiv_20260725_012",
+        "thought": "Excellence is not a destination; it's a habit. — Aristotle",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_011",
-        "thought": "The only person you are destined to become is the person you decide to be. — Ralph Waldo Emerson",
+        "id": "gen_motiv_20260725_013",
+        "thought": "Your scars are evidence that you fought and survived. — Unknown",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_012",
-        "thought": "We suffer more in imagination than in reality. — Seneca",
+        "id": "gen_motiv_20260725_014",
+        "thought": "We cannot direct the wind, but we can adjust the sails. — Dolly Parton",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_013",
-        "thought": "Don't wait to be ready. Readiness is built in the doing. — Unknown",
+        "id": "gen_motiv_20260725_015",
+        "thought": "The obstacle is the way. — Marcus Aurelius",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_014",
-        "thought": "The world breaks everyone, and afterward, some are strong at the broken places. — Ernest Hemingway",
+        "id": "gen_motiv_20260725_016",
+        "thought": "What lies behind us and what lies before us are tiny matters compared to what lies within us. — Ralph Waldo Emerson",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_015",
-        "thought": "What you resist persists. What you accept transforms. — Unknown",
+        "id": "gen_motiv_20260725_017",
+        "thought": "Every master was once a disaster. — T. Harv Eker",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_016",
-        "thought": "You don't rise to the level of your goals; you fall to the level of your systems. — Unknown",
+        "id": "gen_motiv_20260725_018",
+        "thought": "Do the work, especially when you don't feel like it. That's where the real growth lives. — Unknown",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_017",
-        "thought": "The mind is everything. What you think, you become. — Buddha",
+        "id": "gen_motiv_20260725_019",
+        "thought": "Peace comes from within. Do not seek it without. — Buddha",
         "type": "motivational",
         "source": "generated"
       },
       {
-        "id": "gen_motiv_20260722_018",
-        "thought": "Bravery is not the absence of fear—it's moving forward anyway. — Unknown",
-        "type": "motivational",
-        "source": "generated"
-      },
-      {
-        "id": "gen_motiv_20260722_019",
-        "thought": "Your willingness to look stupid is proportional to your capacity to learn. — Unknown",
-        "type": "motivational",
-        "source": "generated"
-      },
-      {
-        "id": "gen_motiv_20260722_020",
-        "thought": "The only failure is the one you don't learn from. — Unknown",
+        "id": "gen_motiv_20260725_020",
+        "thought": "The person you'll become is determined by the books you read and the people you surround yourself with. — Will Smith",
         "type": "motivational",
         "source": "generated"
       }
     ],
     "darkjoke": [
       {
-        "id": "gen_dark_20260722_001",
-        "thought": "I told my girlfriend she'd be perfect if she lost a few pounds.\nTurns out she was already planning to—just in a different way.",
+        "id": "gen_dark_20260725_001",
+        "thought": "I told my date I was really into helping people.\nShe said that's sweet. I said, \"I know—I'm a therapist,\" and immediately billed her for emotional labor.",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_002",
-        "thought": "My dad said he wanted to die peacefully in his sleep like his father did.\nNot screaming in terror like the passengers in his car.",
+        "id": "gen_dark_20260725_002",
+        "thought": "My dad said he wanted to die doing what he loved.\nTurns out that was disappointing everyone.",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_003",
-        "thought": "I have a stepladder because my real ladder left when I was just a kid.",
+        "id": "gen_dark_20260725_003",
+        "thought": "I'm reading a book about anti-gravity.\nIt's impossible to put down, which is ironic because my motivation is.",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_004",
-        "thought": "My therapist says I'm avoidant, so I stopped going.\nShe seemed upset when I explained this was working great for me.",
+        "id": "gen_dark_20260725_004",
+        "thought": "My friend said he was going to start journaling to process his emotions.\nI said, \"Good idea.\" He said, \"Why?\" I said, \"So there's at least one record of you having them.\"",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_005",
-        "thought": "I asked the suicide hotline if they had any openings.\nApparently that's not what they meant by \"we're here for you.\"",
+        "id": "gen_dark_20260725_005",
+        "thought": "I asked my boss if I'd ever make partner.\nHe said, \"Only if you keep working like you're replaceable.\"\nI said, \"I thought that was motivating.\" He said, \"It was supposed to be.\"",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_006",
-        "thought": "My wife left me because I'm too pessimistic.\nWhich honestly just proves my point.",
+        "id": "gen_dark_20260725_006",
+        "thought": "My therapist asked if I ever felt like giving up.\nI said, \"Every day.\" She said, \"That's good—means you're trying.\"",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_007",
-        "thought": "I told my friend he'd be a great father someday.\nHe said, \"Thanks.\" I said, \"I'm serious—keep the receipts.\"",
+        "id": "gen_dark_20260725_007",
+        "thought": "I told my friend he should see a therapist about his anxiety.\nHe asked why I kept recommending that. I said, \"Because they need the business too.\"",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_008",
-        "thought": "My dog has separation anxiety, which is ironic because I have abandonment issues.\nWe're basically perfect for each other until I inevitably disappoint him.",
+        "id": "gen_dark_20260725_008",
+        "thought": "My ex-girlfriend said she needed space.\nI gave her the whole house and some legal distance.",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_009",
-        "thought": "I'm on a seafood diet.\nI see food, I eat it, and then I see my reflection and lose my appetite.",
+        "id": "gen_dark_20260725_009",
+        "thought": "I asked my doctor if there was anything I could do to live longer.\nHe said, \"Stop coming to these appointments and worrying about it.\"",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_010",
-        "thought": "My boss asked if I had any weaknesses.\nI said, \"I'm too honest.\" He said, \"I don't think that's a weakness.\"\nI said, \"I don't care what you think.\"",
+        "id": "gen_dark_20260725_010",
+        "thought": "I'm terrible at keeping secrets.\nMy wife knows because I told my therapist, who probably told her patients, who definitely told their husbands.",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_011",
-        "thought": "I used to play Russian roulette, but I kept losing.\nNow I just work in customer service—same odds, better pay.",
+        "id": "gen_dark_20260725_011",
+        "thought": "My friend said he was going to change his life.\nI said, \"Good luck.\" He said, \"Why?\" I said, \"Because you have a track record of finishing things you start, and that's never gone well.\"",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_012",
-        "thought": "My friend said he was going to get in shape.\nLast I heard, he's doing great—round is technically a shape.",
+        "id": "gen_dark_20260725_012",
+        "thought": "I told my boss I was feeling burnt out.\nHe said, \"Have you tried taking time off?\" I said, \"I have two weeks vacation.\" He said, \"I meant permanently.\"",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_013",
-        "thought": "I told my kids that Santa wasn't real.\nTurns out my ex-wife had already told them that about me.",
+        "id": "gen_dark_20260725_013",
+        "thought": "My parents asked why I wasn't married yet.\nI said, \"I'm still looking for someone who makes me as happy as being alone does.\"\nThey got really quiet.",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_014",
-        "thought": "My lawyer says I have a strong case.\nUnfortunately, it's a case of poor judgment spread across multiple incidents.",
+        "id": "gen_dark_20260725_014",
+        "thought": "I went to a motivational speaker who kept saying \"You can do anything you set your mind to.\"\nI set my mind to leaving early, and he was right.",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_015",
-        "thought": "I went to a self-help seminar called \"How to Stop Being Codependent.\"\nMy wife said I shouldn't go, so I didn't. See? I'm already better.",
+        "id": "gen_dark_20260725_015",
+        "thought": "My friend said he was going to start living his best life.\nI said, \"Finally.\" He said, \"Why finally?\" I said, \"Because your current life is unwatchable.\"",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_016",
-        "thought": "I asked my doctor if I'd live to see a hundred.\nHe said, \"Probably not—based on how you drive.\"",
+        "id": "gen_dark_20260725_016",
+        "thought": "My therapist asked what I wanted to work on this session.\nI said, \"Can we talk about my self-esteem?\" She said, \"Sure, but we should probably start with realistic goals first.\"",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_017",
-        "thought": "My therapist asked what my biggest fear was.\nI said, \"That one day I'll realize I wasted all this time talking to you.\"\nShe said, \"We still have fifty minutes left.\"",
+        "id": "gen_dark_20260725_017",
+        "thought": "I told my mom I was depressed.\nShe said, \"You should go outside more.\" I said, \"Outside is where all the people are.\"",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_018",
-        "thought": "I'm trying to be more positive, so I've started a gratitude journal.\nYesterday I was grateful I didn't have to go to work.\nToday I'm grateful for that.",
+        "id": "gen_dark_20260725_018",
+        "thought": "My coworker said she was on a new diet.\nI asked how it was going. She said, \"Great—I've lost ten pounds and my will to live.\"",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_019",
-        "thought": "My friend said he was cutting out toxic people from his life.\nI asked, \"Starting with yourself?\"\nHe stopped texting me after that.",
+        "id": "gen_dark_20260725_019",
+        "thought": "I asked my friend why he never calls anymore.\nHe said, \"I'm trying to be present in the moment.\" I said, \"You're literally on your phone right now.\" He said, \"Yeah, but not with you.\"",
         "type": "darkjoke",
         "source": "generated"
       },
       {
-        "id": "gen_dark_20260722_020",
-        "thought": "I told my boss I was having a existential crisis.\nHe said, \"That's great—can you have it after 5 PM?\"",
+        "id": "gen_dark_20260725_020",
+        "thought": "My dentist said I need to floss more.\nI said, \"I'll try.\" He said, \"No, you won't.\" I said, \"How did you know?\" He said, \"You said that six months ago. You haven't changed. You won't change.\"",
         "type": "darkjoke",
         "source": "generated"
       }
